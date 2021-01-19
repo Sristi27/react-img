@@ -9,7 +9,7 @@ const http=require('http')
 
 
 const hostname = '127.0.0.1';
-const port = process.env.PORT || 5000; // Step 1
+const PORT = process.env.PORT || 5000; // Step 1
 
 mongoose.connect(process.env.MONGODB_URI || 
     "mongodb+srv://sristi27:Cr0EoTdUalbUHga0@cluster0.r2lu4.mongodb.net/users?retryWrites=true&w=majority",
@@ -109,6 +109,6 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(PORT, () => {
+    console.log(`Server running at ${PORT}`);
   });
