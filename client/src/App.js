@@ -41,17 +41,19 @@ function App() {
 
 
   return (
-    <div>
+    <div className="App">
+      <h1>Image Upload using MERN</h1>
      <form onSubmit={handleSubmit} encType="multipart/form-data">
        <input type="file" accept=".png,.jpeg" name="myImg" onChange={e=>setmyImg(e.target.files[0])}></input>
        <input type="text" placeholder="Enter your name" onChange={e=>setName(e.target.value)}></input>
+       <br/>
        <button type="submit">Submit</button>
      </form>
      {response!=''?
-     <div>
+     <div className="response">
      <h1>{response}</h1>
      <h2>{userName}</h2>
-     <img src={userImg}/>
+     <img src={userImg} className="image"/>
      </div>
      :<h1>{errMsg}</h1>}
      

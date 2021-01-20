@@ -92,7 +92,7 @@ app.post("/uploadForm",upload.single('myImg'),async (req,res,next)=>
     }
 }
 else{
-    res.status(400).json({message:'User IMage does not exists'})
+    res.status(400).json({message:'User Image does not exists'})
 }
 });
 
